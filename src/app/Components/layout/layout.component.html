@@ -1,0 +1,28 @@
+<mat-toolbar color="primary" class="example-header mat-toolbar-row">
+  <button mat-icon-button id="sidebarToggle" class="mr-3" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <app-header></app-header>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    #sidenav
+    opened
+    class="example-sidenav"
+    [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="true"
+    [fixedBottomGap]="0"
+    [fixedTopGap]="56"
+  >
+      <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- Body -->
+    <app-accordian></app-accordian>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,41 @@
+<mat-grid-list style="min-width: 70vw;"
+  [cols]="mobileQuery.matches ? 1 : tabQuery.matches ? 2 : 4"
+  rowHeight="100px"
+>
+  <mat-grid-tile>
+    <mat-form-field class="w-100 px-2">
+      <mat-label>First Name</mat-label>
+      <input matInput type="text" placeholder="Ex. Jhon" />
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field class="w-100 px-2">
+      <mat-label>Last Name</mat-label>
+      <input matInput type="text" placeholder="Ex. Smith" />
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field class="w-100 px-2">
+      <mat-label>Age</mat-label>
+      <input matInput type="number" placeholder="Ex. 25" />
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-form-field class="w-100 px-2">
+      <mat-label>DOB</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-radio-group aria-label="Gender" class="w-100 px-2">
+      <mat-label>Gender</mat-label>
+      <mat-radio-button class="pl-2" value="1">Male</mat-radio-button>
+      <mat-radio-button class="pl-2" value="2">Female</mat-radio-button>
+    </mat-radio-group>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-checkbox>Accept Terms and Condtions..</mat-checkbox>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,37 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+  }
+.accordionHeader{
+  background: #3f51b5 !important;
+}
+.accordionHeader:hover{
+  background: #3c4a9c !important;
+}
+.mat-expansion-panel-header-title{
+  color: #fff !important;
+
+}
+/* accordionHeader */
+/*  */
+.example-container {
+  height: 520px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+.bodyContent{
+  min-height: calc(100vh - 120px);
+}
+.example-table-container {
+  position: relative;
+  max-height: 460px;
+  overflow: auto;
+}
